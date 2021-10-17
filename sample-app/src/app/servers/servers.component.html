@@ -1,3 +1,9 @@
 <p>servers works!</p>
-<app-server></app-server>
+<!-- <input type="text" (input)="onUpdateServerValue($event)" /> -->
+<input type="text" [(ngModel)]="serverDescription" />
+<button [disabled]="!isAvailable" (click)="changeServerStatus()">
+  is Server available
+</button>
+<p>{{ currentStatus }}</p>
+<p>{{ serverDescription }}</p>
 <app-server></app-server>
